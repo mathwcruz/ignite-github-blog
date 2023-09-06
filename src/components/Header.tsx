@@ -35,7 +35,7 @@ export function Header() {
   }, [])
 
   return (
-    <header className="-m-16">
+    <header className="-mt-16">
       <Card className="drop-shadow flex flex-row gap-8">
         <img src={gitHubUser.avatarUrl} alt="" className="w-36 rounded-lg" />
 
