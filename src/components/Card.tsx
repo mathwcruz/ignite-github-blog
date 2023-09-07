@@ -8,7 +8,7 @@ interface CardProps extends CanvasHTMLAttributes<HTMLDivElement> {
 export function Card({ children, className, ...rest }: CardProps) {
   return (
     <div
-      className={`min-w-[316px] min-h-[180px] rounded-lg p-8 flex bg-gray-600 ${className}`}
+      className={`min-w-[316px] rounded-lg p-8 flex bg-gray-600 ${className}`}
       {...rest}
     >
       {children}

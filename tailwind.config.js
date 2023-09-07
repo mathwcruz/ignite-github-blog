@@ -17,5 +17,5 @@ export default {
       'gray-900': '#040F1A',
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 }

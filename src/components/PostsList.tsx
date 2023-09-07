@@ -19,11 +19,11 @@ export function PostsList({ posts }: PostsListProps) {
   }
 
   return (
-    <ul className="grid grid-cols-2 items-center gap-8 mt-9 mb-[208px]">
+    <ul className="grid grid-cols-2 items-center gap-8 mt-9 mb-[176px]">
       {posts?.map(({ id, title, body, createdAt }) => (
         <Card
           key={id}
-          className="max-w-[416px] max-h-[260px] flex-col items-start cursor-pointer border-2 border-gray-800 hover:border-gray-400 hover:scale-105 transition-colors duration-300 ease-in-out"
+          className="max-w-[416px] h-[260px] flex-col items-start cursor-pointer border-2 border-gray-800 hover:border-gray-400 hover:scale-105 transition-colors duration-300 ease-in-out"
           onClick={() => openPost(id)}
         >
           <div className="flex gap-1 items-start justify-between w-full mb-5">
@@ -39,9 +39,9 @@ export function PostsList({ posts }: PostsListProps) {
           </div>
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
-            className="w-full text-base text-gray-200 truncate"
+            className="w-[352px] prose prose-p:text-gray-200"
           >
-            {body}
+            {`${body?.slice(0, 235)}...`}
           </ReactMarkdown>
         </Card>
       ))}

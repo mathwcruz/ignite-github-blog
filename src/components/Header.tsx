@@ -36,7 +36,7 @@ export function Header() {
 
   return (
     <header className="-mt-16">
-      <Card className="drop-shadow flex flex-row gap-8">
+      <Card className="w-[864px] h-[212px] drop-shadow flex flex-row gap-8">
         <img src={gitHubUser.avatarUrl} alt="" className="w-36 rounded-lg" />
 
         <section className="flex flex-col items-start gap-2 w-full">
@@ -48,7 +48,7 @@ export function Header() {
               href={gitHubUser.profileUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 mt-[2px] text-blue-400 text-xs uppercase transition-colors ease-linear hover:opacity-80"
+              className="flex items-center gap-2 mt-[2px] text-blue-400 text-xs uppercase transition-colors ease-in-out hover:opacity-75"
             >
               github
               <img

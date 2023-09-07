@@ -2,10 +2,11 @@
 import { useState, useCallback, ChangeEvent } from 'react'
 
 import { Post } from '../interfaces/post'
+import allPosts from '../utils/data/posts.json'
 import { Header } from '../components/Header'
 import { PostsList } from '../components/PostsList'
 
-import allPosts from '../utils/data/posts.json'
+import emptyData from '../assets/empty-data.svg'
 
 export function Posts() {
   const [searchContent, setSearchContent] = useState<string>('')
@@ -28,7 +29,7 @@ export function Posts() {
   }, [])
 
   return (
-    <main className="flex flex-col gap-28">
+    <main className="flex flex-col gap-28 mb-8">
       <Header />
 
       <div className="mt-6 max-w-[852px] w-full flex flex-col gap-3">
@@ -52,7 +53,14 @@ export function Posts() {
           }}
         />
 
-        <PostsList posts={posts} />
+        {posts?.length > 0 ? (
+          <PostsList posts={posts} />
+        ) : (
+          <div className="flex flex-col gap-4 items-center justify-center mt-10">
+            <img src={emptyData} alt="" className="self-center w-32" />
+            There are no posts
+          </div>
+        )}
       </div>
     </main>
   )

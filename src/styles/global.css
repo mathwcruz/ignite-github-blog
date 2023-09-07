@@ -7,3 +7,16 @@ body {
   font-family: 'Nunito', sans-serif;
   line-height: 160%;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #AFC2D4);
+  border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #C4D4E3);
+}
